@@ -65,6 +65,19 @@
 	function handleRemove() {
 		things = things.slice(1);
 	}
+
+	// Exercise 8
+	async function getRandomNumber() {
+		const res = '';
+
+		return res;
+	}
+
+	let promise = getRandomNumber();
+
+	function handleRandomNumber() {
+		//
+	}
 </script>
 
 <h1 class="rounded-md text-center text-3xl">Welcome to SvelteKit</h1>
@@ -136,4 +149,17 @@
 	{#each things as thing (thing.id)}
 		<Thing name={thing.name} />
 	{/each}
+</div>
+
+<div>
+	<h2>Exercise 8</h2>
+	<Button text="Get random number" onClick={handleRandomNumber} />
+
+	{#await promise}
+		<p>...waiting</p>
+	{:then number}
+		<p>The number is: {number}</p>
+	{:catch error}
+		<p style="color: red">{error.message}</p>
+	{/await}
 </div>
