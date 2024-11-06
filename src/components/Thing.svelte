@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onDestroy } from 'svelte';
 
 	const emojis = {
@@ -9,7 +9,7 @@
 		egg: '🥚'
 	};
 
-	export let name;
+	export let name: string;
 
 	const emoji = emojis[name];
 

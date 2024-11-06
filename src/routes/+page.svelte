@@ -78,6 +78,9 @@
 	function handleRandomNumber() {
 		//
 	}
+
+	// Exercise 9
+	let m = { x: 0, y: 0 };
 </script>
 
 <h1 class="rounded-md text-center text-3xl">Welcome to SvelteKit</h1>
@@ -141,8 +144,8 @@
 	</ul>
 </div>
 
-<div>
-	<h2>Exercise 7</h2>
+<div class="mb-8">
+	<h2 class="text-lg font-bold">Exercise 7</h2>
 
 	<Button onClick={handleRemove} text="Remove first thing" />
 
@@ -151,8 +154,8 @@
 	{/each}
 </div>
 
-<div>
-	<h2>Exercise 8</h2>
+<div class="mb-8">
+	<h2 class="text-lg font-bold">Exercise 8</h2>
 	<Button text="Get random number" onClick={handleRandomNumber} />
 
 	{#await promise}
@@ -162,4 +165,15 @@
 	{:catch error}
 		<p style="color: red">{error.message}</p>
 	{/await}
+</div>
+
+<div
+	on:mousemove={(e) => {
+		m.x = e.clientX;
+		m.y = e.clientY;
+	}}
+	role="article"
+>
+	<h2 class="text-lg font-bold">Exercise 9</h2>
+	<div class="h-96 w-96 bg-red-200">The mouse position is {m.x} x {m.y}</div>
 </div>
