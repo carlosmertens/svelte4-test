@@ -168,6 +168,7 @@
 </div>
 
 <div
+	class="mb-8"
 	on:mousemove={(e) => {
 		m.x = e.clientX;
 		m.y = e.clientY;
@@ -176,4 +177,11 @@
 >
 	<h2 class="text-lg font-bold">Exercise 9</h2>
 	<div class="h-96 w-96 bg-red-200">The mouse position is {m.x} x {m.y}</div>
+</div>
+
+<div class="mb-8">
+	<h2>Exercise 10</h2>
+	<button class="rounded-md border-2 p-2" on:click|once={() => alert('I work only once')}
+		>Click me</button
+	>
 </div>
