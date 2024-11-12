@@ -7,3 +7,5 @@
 <button on:click={onClick} class={`rounded-md bg-${color}-400 px-2 hover:bg-${color}-30`}
 	>{text}</button
 >
+
+// Testing work email address with git remote
